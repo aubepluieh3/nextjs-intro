@@ -2,10 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [counter, setCounter] = useState(0);
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Hello {counter}</h1>
+      <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
     </div>
   );
 }
